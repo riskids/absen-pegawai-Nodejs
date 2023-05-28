@@ -21,9 +21,7 @@ const insert = async (data, userId) => {
 const modify = async (id, req) => {
   const Cekepresence = await Epresence.findOne(
     {
-      include: User
-    },
-    { 
+      include: User,
       where: {id:id} 
     }
     );
